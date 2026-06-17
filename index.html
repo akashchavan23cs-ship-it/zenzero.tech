@@ -1,0 +1,1212 @@
+F<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zenzeros Infotech Pvt Ltd - Digital Solutions for Schools</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+img, svg, video {max-width:100%;height:auto;}
+body {margin:0;font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);color:#fff;overflow-x:hidden;min-height:100vh;position:relative;}
+
+/* Floating Particles */
+.particles {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;}
+.particle {position:absolute;background:rgba(255,255,255,0.8);border-radius:50%;animation:floatUp 15s infinite linear;}
+.particle:nth-child(1) {width:4px;height:4px;left:10%;animation-delay:0s;animation-duration:12s;}
+.particle:nth-child(2) {width:6px;height:6px;left:20%;animation-delay:2s;animation-duration:18s;}
+.particle:nth-child(3) {width:3px;height:3px;left:30%;animation-delay:4s;animation-duration:15s;}
+.particle:nth-child(4) {width:5px;height:5px;left:40%;animation-delay:6s;animation-duration:20s;}
+.particle:nth-child(5) {width:4px;height:4px;left:50%;animation-delay:8s;animation-duration:14s;}
+.particle:nth-child(6) {width:6px;height:6px;left:60%;animation-delay:10s;animation-duration:16s;}
+.particle:nth-child(7) {width:3px;height:3px;left:70%;animation-delay:12s;animation-duration:13s;}
+.particle:nth-child(8) {width:5px;height:5px;left:80%;animation-delay:14s;animation-duration:19s;}
+.particle:nth-child(9) {width:4px;height:4px;left:90%;animation-delay:16s;animation-duration:17s;}
+.particle:nth-child(10) {width:6px;height:6px;left:95%;animation-delay:18s;animation-duration:21s;}
+
+/* Floating Shapes */
+.floating-shapes {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;}
+.shape {position:absolute;border:2px solid rgba(255,255,255,0.3);border-radius:50%;}
+.shape:nth-child(1) {width:80px;height:80px;top:10%;left:5%;animation:wave 8s ease-in-out infinite;}
+.shape:nth-child(2) {width:60px;height:60px;top:20%;left:80%;animation:wave 10s ease-in-out infinite reverse;}
+.shape:nth-child(3) {width:100px;height:100px;top:60%;left:10%;animation:wave 12s ease-in-out infinite;}
+.shape:nth-child(4) {width:40px;height:40px;top:80%;left:70%;animation:wave 9s ease-in-out infinite reverse;}
+.shape:nth-child(5) {width:70px;height:70px;top:40%;left:50%;animation:wave 11s ease-in-out infinite;}
+
+/* Animations */
+@keyframes fadeInUp {from {opacity:0;transform:translateY(30px);} to {opacity:1;transform:translateY(0);}}
+@keyframes fadeInLeft {from {opacity:0;transform:translateX(-50px);} to {opacity:1;transform:translateX(0);}}
+@keyframes fadeInRight {from {opacity:0;transform:translateX(50px);} to {opacity:1;transform:translateX(0);}}
+@keyframes pulse {0%,100% {transform:scale(1);} 50% {transform:scale(1.05);}}
+@keyframes float {0%,100% {transform:translateY(0);} 50% {transform:translateY(-10px);}}
+@keyframes glow {0%,100% {box-shadow:0 0 5px rgba(56,189,248,0.5);} 50% {box-shadow:0 0 20px rgba(56,189,248,0.8),0 0 30px rgba(56,189,248,0.4);}}
+@keyframes slideIn {from {opacity:0;transform:translateX(-100%);} to {opacity:1;transform:translateX(0);}}
+@keyframes rotate {from {transform:rotate(0deg);} to {transform:rotate(360deg);}}
+@keyframes shimmer {0% {background-position:-1000px 0;} 100% {background-position:1000px 0;}}
+@keyframes floatUp {0% {transform:translateY(100vh) rotate(0deg);opacity:0;} 10% {opacity:1;} 90% {opacity:1;} 100% {transform:translateY(-100vh) rotate(360deg);opacity:0;}}
+@keyframes floatDown {0% {transform:translateY(-100vh) rotate(0deg);opacity:0;} 10% {opacity:1;} 90% {opacity:1;} 100% {transform:translateY(100vh) rotate(-360deg);opacity:0;}}
+@keyframes floatLeft {0% {transform:translateX(100vw) rotate(0deg);opacity:0;} 10% {opacity:1;} 90% {opacity:1;} 100% {transform:translateX(-100vw) rotate(360deg);opacity:0;}}
+@keyframes floatRight {0% {transform:translateX(-100vw) rotate(0deg);opacity:0;} 10% {opacity:1;} 90% {opacity:1;} 100% {transform:translateX(100vw) rotate(-360deg);opacity:0;}}
+@keyframes pulseGlow {0%,100% {box-shadow:0 0 20px rgba(240,147,251,0.8),0 0 40px rgba(102,126,234,0.6),0 0 60px rgba(245,87,108,0.4);} 50% {box-shadow:0 0 30px rgba(240,147,251,1),0 0 60px rgba(102,126,234,0.8),0 0 90px rgba(245,87,108,0.6);}}
+@keyframes wave {0% {transform:translateX(0) translateY(0);} 25% {transform:translateX(-20px) translateY(-10px);} 50% {transform:translateX(20px) translateY(5px);} 75% {transform:translateX(-10px) translateY(-5px);} 100% {transform:translateX(0) translateY(0);}}
+
+/* Header */
+header {padding:20px 50px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(255,255,255,0.85));position:fixed;width:100%;top:0;z-index:1000;backdrop-filter:blur(20px);animation:fadeInDown 0.8s ease-out;border-bottom:2px solid rgba(102,126,234,0.3);box-shadow:0 8px 32px rgba(102,126,234,0.2);}
+/* CSS Generated Logo */
+.logo-container {display:flex;align-items:center;justify-content:center;position:relative;}
+.logo {width:50px;height:50px;background:linear-gradient(135deg,#667eea,#f093fb);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:#fff;position:relative;overflow:hidden;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(102,126,234,0.3);}
+.logo::before {content:'';position:absolute;top:-2px;left:-2px;width:54px;height:54px;background:linear-gradient(135deg,transparent 30%,rgba(255,255,255,0.2) 50%,transparent 70%);animation:rotate 3s linear infinite;}
+.logo::after {content:'Z';position:absolute;font-size:24px;font-weight:900;color:rgba(255,255,255,0.3);top:50%;left:50%;transform:translate(-50%,-50%);letter-spacing:-2px;}
+.logo:hover {transform:scale(1.1) rotate(5deg);box-shadow:0 6px 25px rgba(240,147,251,0.4);background:linear-gradient(135deg,#f093fb,#667eea);}
+
+header h1 {color:#667eea;font-size:28px;font-weight:700;letter-spacing:-0.5px;text-shadow:0 2px 10px rgba(102,126,234,0.3);display:flex;align-items:center;gap:15px;}
+.company-name {color:#333;font-weight:600;letter-spacing:-0.3px;transition:all 0.3s ease;}
+.company-name:hover {color:#667eea;transform:scale(1.05);}
+nav a {color:#333;margin:0 15px;text-decoration:none;font-weight:600;position:relative;transition:all 0.3s ease;padding:8px 16px;border-radius:25px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;}
+nav a::after {content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:#f093fb;transition:width 0.3s ease;}
+nav a:hover {color:#fff;background:linear-gradient(135deg,#f093fb,#f5576c);transform:translateY(-2px) scale(1.05);box-shadow:0 8px 25px rgba(240,147,251,0.4);}
+nav a:hover::after {width:100%;}
+
+/* Hero Section */
+.hero {height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);position:relative;overflow:hidden;}
+.hero::before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="white" opacity="0.2"/><circle cx="80" cy="80" r="3" fill="white" opacity="0.2"/><circle cx="50" cy="10" r="2" fill="white" opacity="0.2"/></svg>');animation:float 6s ease-in-out infinite;}
+.hero::after {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.3) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(240,147,251,0.3) 0%,transparent 50%),radial-gradient(circle at 50% 20%,rgba(102,126,234,0.2) 0%,transparent 50%);animation:pulseGlow 3s ease-in-out infinite;}
+.hero-content {position:relative;z-index:2;animation:fadeInUp 1s ease-out;}
+.hero h2 {font-size:56px;margin-bottom:15px;font-weight:800;line-height:1.2;background:linear-gradient(135deg,#fff,#ffd89b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 4px 20px rgba(255,255,255,0.3);}
+.hero .tagline {font-size:28px;color:#ffd89b;margin-bottom:20px;font-weight:600;letter-spacing:1px;animation:slideIn 1.5s ease-out;}
+.hero p {font-size:22px;max-width:600px;margin-bottom:30px;line-height:1.6;color:#fff;}
+.btn {padding:20px 45px;background:linear-gradient(135deg,#f093fb,#f5576c);border:none;color:#fff;font-size:18px;border-radius:50px;cursor:pointer;font-weight:700;transition:all 0.3s ease;box-shadow:0 12px 35px rgba(240,147,251,0.4);animation:pulse 2s infinite;position:relative;overflow:hidden;}
+.btn::before {content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:left 0.5s ease;}
+.btn:hover::before {left:100%;}
+.btn:hover {transform:translateY(-4px) scale(1.08);box-shadow:0 15px 45px rgba(245,87,108,0.5);background:linear-gradient(135deg,#f5576c,#ff6b6b);animation:pulseGlow 1s ease-in-out infinite;}
+
+/* Sections */
+.section {padding:80px 50px;text-align:center;position:relative;}
+.section:nth-child(even) {background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);}
+.section h2 {font-size:40px;margin-bottom:20px;background:linear-gradient(135deg,#fff,#ffd89b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;text-shadow:0 4px 20px rgba(255,255,255,0.2);}
+.section p {font-size:20px;line-height:1.6;max-width:800px;margin:0 auto 40px;color:#fff;}
+
+/* Cards */
+.cards {display:flex;gap:30px;justify-content:center;flex-wrap:wrap;}
+.card {background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(255,255,255,0.85));padding:35px;border-radius:25px;width:300px;transition:all 0.4s ease;border:2px solid rgba(102,126,234,0.3);position:relative;overflow:hidden;box-shadow:0 15px 35px rgba(102,126,234,0.2);}
+.card::before {content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,#667eea,#f093fb,#f5576c);transform:translateX(-100%);transition:transform 0.3s ease;}
+.card::after {content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(102,126,234,0.08) 0%,transparent 70%);animation:rotate 15s linear infinite;}
+.card:hover::before {transform:translateX(0);}
+.card:hover {transform:translateY(-20px) scale(1.05);box-shadow:0 30px 60px rgba(240,147,251,0.3);border-color:#f093fb;background:linear-gradient(135deg,rgba(255,255,255,1),rgba(240,147,251,0.1));}
+.card h3 {color:#667eea;font-size:24px;margin-bottom:15px;font-weight:700;position:relative;z-index:1;}
+.card p {font-size:16px;line-height:1.6;color:#333;position:relative;z-index:1;}
+
+/* Team Section */
+.team-section {background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(240,147,251,0.1));position:relative;overflow:hidden;backdrop-filter:blur(10px);}
+.team-section::before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="2" fill="white" opacity="0.1"/><circle cx="90" cy="90" r="2" fill="white" opacity="0.1"/></svg>');}
+.team-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;max-width:1200px;margin:0 auto;position:relative;z-index:1;}
+.team-member {background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(255,255,255,0.85));padding:40px;border-radius:30px;text-align:center;transition:all 0.4s ease;border:2px solid rgba(102,126,234,0.3);position:relative;overflow:hidden;box-shadow:0 20px 40px rgba(102,126,234,0.2);}
+.team-member::before {content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(102,126,234,0.08) 0%,transparent 70%);animation:rotate 10s linear infinite;}
+.team-member::after {content:'';position:absolute;bottom:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#667eea,#f093fb,#f5576c);transform:scaleX(0);transition:transform 0.3s ease;}
+.team-member:hover {transform:translateY(-15px) scale(1.03);border-color:#f093fb;box-shadow:0 35px 70px rgba(240,147,251,0.3);}
+.team-member:hover::after {transform:scaleX(1);}
+.member-avatar {width:140px;height:140px;border-radius:50%;margin:0 auto 20px;background:linear-gradient(135deg,#667eea,#f093fb);display:flex;align-items:center;justify-content:center;font-size:48px;color:#fff;font-weight:700;position:relative;z-index:1;box-shadow:0 10px 30px rgba(102,126,234,0.3);border:4px solid rgba(255,255,255,0.5);}
+.member-name {font-size:28px;font-weight:800;color:#333;margin-bottom:8px;}
+.member-role {font-size:18px;color:#667eea;font-weight:600;margin-bottom:15px;letter-spacing:0.5px;}
+.member-bio {font-size:16px;color:#555;line-height:1.6;margin-bottom:15px;}
+.social-link {color:#667eea;text-decoration:none;font-size:16px;font-weight:600;transition:all 0.3s ease;display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:25px;background:linear-gradient(135deg,#667eea,#f093fb);color:#fff;border:2px solid transparent;}
+.social-link:hover {color:#fff;background:linear-gradient(135deg,#f093fb,#f5576c);transform:translateY(-3px) scale(1.05);box-shadow:0 10px 25px rgba(240,147,251,0.4);}
+
+/* Contact Section */
+.contact-info {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;max-width:800px;margin:0 auto;}
+.contact-item {background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(255,255,255,0.85));padding:35px;border-radius:25px;transition:all 0.4s ease;border:2px solid rgba(102,126,234,0.3);box-shadow:0 15px 35px rgba(102,126,234,0.2);position:relative;overflow:hidden;}
+.contact-item::before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle,rgba(102,126,234,0.08) 0%,transparent 70%);opacity:0;transition:opacity 0.3s ease;}
+.contact-item:hover::before {opacity:1;}
+.contact-item:hover {transform:translateY(-10px) scale(1.03);box-shadow:0 25px 50px rgba(240,147,251,0.3);border-color:#f093fb;}
+.contact-item i {font-size:32px;color:#667eea;margin-bottom:15px;display:block;text-align:center;animation:pulse 2s infinite;}
+.contact-item h3 {font-size:22px;color:#333;margin-bottom:12px;font-weight:700;}
+.contact-item p {color:#555;line-height:1.6;font-size:16px;}
+
+/* Inquiry Section */
+.inquiry-section {background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(240,147,251,0.15));backdrop-filter:blur(15px);position:relative;overflow:hidden;}
+.inquiry-section::before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="3" fill="white" opacity="0.1"/><circle cx="80" cy="80" r="3" fill="white" opacity="0.1"/><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');animation:float 8s ease-in-out infinite;}
+.inquiry-container {max-width:1000px;margin:0 auto;position:relative;z-index:1;}
+.inquiry-container h2 {font-size:48px;margin-bottom:20px;background:linear-gradient(135deg,#fff,#ffd89b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.inquiry-container p {font-size:22px;color:#fff;margin-bottom:40px;line-height:1.6;}
+.inquiry-buttons {display:flex;gap:20px;justify-content:center;margin-bottom:50px;flex-wrap:wrap;}
+.inquiry-btn {padding:18px 40px;border-radius:50px;text-decoration:none;font-weight:700;font-size:18px;transition:all 0.3s ease;position:relative;overflow:hidden;border:2px solid transparent;}
+.inquiry-btn::before {content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transition:left 0.5s ease;}
+.inquiry-btn:hover::before {left:100%;}
+.inquiry-btn.primary {background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff;box-shadow:0 10px 30px rgba(240,147,251,0.4);}
+.inquiry-btn.primary:hover {transform:translateY(-3px) scale(1.05);box-shadow:0 15px 40px rgba(245,87,108,0.5);}
+.inquiry-btn.secondary {background:transparent;color:#fff;border-color:rgba(255,255,255,0.5);}
+.inquiry-btn.secondary:hover {background:rgba(255,255,255,0.1);border-color:#fff;transform:translateY(-3px) scale(1.05);}
+.inquiry-features {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.feature-item {background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0.05));padding:30px;border-radius:20px;text-align:center;transition:all 0.3s ease;border:1px solid rgba(255,255,255,0.2);}
+.feature-item:hover {transform:translateY(-10px);background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(255,255,255,0.1));box-shadow:0 20px 40px rgba(240,147,251,0.3);}
+.feature-item i {font-size:36px;color:#ffd89b;margin-bottom:20px;display:block;animation:pulse 2s infinite;}
+.feature-item h3 {font-size:22px;color:#fff;margin-bottom:10px;font-weight:700;}
+.feature-item p {font-size:16px;color:rgba(255,255,255,0.9);line-height:1.5;}
+
+/* Footer */
+.footer {background:linear-gradient(135deg,rgba(102,126,234,0.9),rgba(240,147,251,0.9));padding:50px;text-align:center;border-top:3px solid rgba(255,255,255,0.3);position:relative;overflow:hidden;}
+.footer::before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');}
+.footer-content {max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;text-align:left;position:relative;z-index:1;}
+.footer-section h3 {color:#fff;font-size:24px;margin-bottom:15px;font-weight:700;text-shadow:0 2px 10px rgba(255,255,255,0.3);}
+.footer-section p {color:#fff;line-height:1.6;font-size:16px;}
+.footer-bottom {margin-top:40px;padding-top:25px;border-top:2px solid rgba(255,255,255,0.3);color:#fff;font-size:15px;position:relative;z-index:1;}
+
+/* Scroll Animations */
+.fade-in-up {opacity:0;transform:translateY(30px);transition:all 0.8s ease;}
+.fade-in-up.visible {opacity:1;transform:translateY(0);}
+
+/* Responsive */
+@media (max-width:768px) {
+/* Header */
+header {padding:15px 20px;flex-direction:column;gap:15px;}
+header h1 {font-size:24px;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;}
+.logo {width:40px;height:40px;background:linear-gradient(135deg,#667eea,#f093fb);border-radius:10px;font-size:16px;box-shadow:0 3px 12px rgba(102,126,234,0.3);}
+.logo::before {width:44px;height:44px;animation:rotate 3s linear infinite;}
+.logo::after {font-size:20px;letter-spacing:-1px;}
+.company-name {font-size:16px;color:#333;font-weight:600;letter-spacing:-0.2px;}
+nav {display:flex;flex-wrap:wrap;justify-content:center;gap:10px;}
+nav a {padding:6px 12px;font-size:14px;margin:5px;}
+
+/* Hero Section */
+.hero {padding:20px;min-height:100vh;}
+.hero h2 {font-size:32px;line-height:1.3;margin-bottom:10px;}
+.hero .tagline {font-size:20px;margin-bottom:15px;}
+.hero p {font-size:18px;margin-bottom:25px;}
+.btn {padding:15px 30px;font-size:16px;}
+
+/* Sections */
+.section {padding:60px 20px;}
+.section h2 {font-size:32px;margin-bottom:15px;}
+.section p {font-size:18px;margin-bottom:30px;}
+
+/* Cards */
+.cards {flex-direction:column;align-items:center;gap:20px;}
+.card {width:100%;max-width:350px;padding:25px;}
+.card h3 {font-size:20px;}
+.card p {font-size:14px;}
+
+/* Team Section */
+.team-grid {grid-template-columns:1fr;gap:30px;}
+.team-member {padding:30px;}
+.member-avatar {width:100px;height:100px;font-size:36px;}
+.member-name {font-size:22px;}
+.member-role {font-size:16px;}
+.member-bio {font-size:14px;}
+.social-link {padding:8px 16px;font-size:14px;}
+
+/* Contact Section */
+.contact-info {grid-template-columns:1fr;gap:20px;}
+.contact-item {padding:25px;}
+.contact-item i {font-size:28px;}
+.contact-item h3 {font-size:20px;}
+.contact-item p {font-size:15px;}
+
+/* Inquiry Section */
+.inquiry-container h2 {font-size:32px;}
+.inquiry-container p {font-size:18px;}
+.inquiry-buttons {flex-direction:column;gap:15px;}
+.inquiry-btn {padding:15px 30px;font-size:16px;width:100%;max-width:300px;}
+.inquiry-features {grid-template-columns:1fr;gap:20px;}
+.feature-item {padding:25px;}
+.feature-item i {font-size:28px;}
+.feature-item h3 {font-size:20px;}
+.feature-item p {font-size:14px;}
+
+/* Footer */
+.footer-content {grid-template-columns:1fr;gap:30px;text-align:center;}
+.footer-section {text-align:center;}
+.footer-bottom {font-size:14px;}
+
+/* Floating Elements */
+.particle {display:none;}
+.shape {display:none;}
+}
+
+@media (max-width:480px) {
+header h1 {font-size:20px;display:flex;align-items:center;justify-content:center;gap:8px;}
+.logo {width:35px;height:35px;background:linear-gradient(135deg,#667eea,#f093fb);border-radius:8px;font-size:14px;box-shadow:0 2px 10px rgba(102,126,234,0.3);}
+.logo::before {width:39px;height:39px;animation:rotate 3s linear infinite;}
+.logo::after {font-size:18px;letter-spacing:-1px;}
+.company-name {font-size:14px;color:#333;font-weight:600;letter-spacing:-0.1px;}
+nav a {font-size:12px;padding:5px 10px;}
+.hero h2 {font-size:28px;}
+.hero .tagline {font-size:18px;}
+.hero p {font-size:16px;}
+.btn {padding:12px 25px;font-size:14px;}
+.section h2 {font-size:28px;}
+.section p {font-size:16px;}
+.card {padding:20px;}
+.card h3 {font-size:18px;}
+.card p {font-size:13px;}
+.member-avatar {width:80px;height:80px;font-size:30px;}
+.member-name {font-size:20px;}
+.member-role {font-size:14px;}
+.member-bio {font-size:13px;}
+.social-link {font-size:12px;}
+.contact-item {padding:20px;}
+.contact-item i {font-size:24px;}
+.contact-item h3 {font-size:18px;}
+.contact-item p {font-size:14px;}
+.inquiry-container h2 {font-size:28px;}
+.inquiry-container p {font-size:16px;}
+.inquiry-btn {font-size:14px;padding:12px 25px;}
+.feature-item {padding:20px;}
+.feature-item i {font-size:24px;}
+.feature-item h3 {font-size:18px;}
+.feature-item p {font-size:13px;}
+.footer {padding:30px 20px;}
+.footer-section h3 {font-size:20px;}
+.footer-section p {font-size:14px;}
+}
+
+/* 2026 responsive visual refresh */
+:root {
+--ink:#111827;
+--muted:#5b6472;
+--surface:#ffffff;
+--soft:#f5f7fb;
+--line:rgba(17,24,39,0.12);
+--brand:#2563eb;
+--brand-dark:#1e3a8a;
+--accent:#f59e0b;
+--gold:#fbbf24;
+--platinum:#e5e7eb;
+}
+
+html {scroll-behavior:smooth;}
+body {
+background:#f7fbfd;
+color:var(--ink);
+line-height:1.5;
+}
+body::before {
+content:'';
+position:fixed;
+inset:0;
+z-index:0;
+pointer-events:none;
+background:
+linear-gradient(120deg,rgba(37,99,235,0.09),transparent 34%),
+linear-gradient(240deg,rgba(245,158,11,0.10),transparent 38%),
+repeating-linear-gradient(90deg,rgba(17,24,39,0.035) 0 1px,transparent 1px 82px),
+repeating-linear-gradient(0deg,rgba(17,24,39,0.025) 0 1px,transparent 1px 82px);
+}
+header,
+.section,
+.hero,
+.footer,
+.particles,
+.floating-shapes {position:relative;}
+header,
+.section,
+.hero,
+.footer {z-index:2;}
+
+header {
+padding:14px clamp(18px,4vw,56px);
+background:rgba(255,255,255,0.88);
+border-bottom:1px solid var(--line);
+box-shadow:0 16px 45px rgba(18,32,51,0.08);
+}
+.logo {
+background:linear-gradient(135deg,var(--brand-dark),var(--brand));
+border-radius:16px;
+box-shadow:0 12px 28px rgba(37,99,235,0.25);
+}
+.logo::before {display:none;}
+.logo:hover {
+background:linear-gradient(135deg,var(--accent),var(--brand));
+}
+.company-name,
+header h1 {color:var(--ink);text-shadow:none;}
+nav {display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
+nav a {
+margin:0;
+padding:10px 16px;
+border-radius:999px;
+background:transparent;
+color:var(--ink);
+box-shadow:none;
+border:1px solid transparent;
+}
+nav a:hover {
+background:var(--ink);
+color:#fff;
+box-shadow:0 12px 24px rgba(18,32,51,0.16);
+transform:translateY(-2px);
+}
+nav a::after {display:none;}
+
+.hero {
+min-height:100vh;
+height:auto;
+padding:150px clamp(18px,6vw,76px) 90px;
+align-items:flex-start;
+text-align:left;
+background:
+linear-gradient(120deg,rgba(17,24,39,0.9),rgba(30,58,138,0.78)),
+url('akash chavan.jpg') center/cover;
+}
+.hero::before {
+background:linear-gradient(90deg,rgba(255,255,255,0.12) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,0.1) 1px,transparent 1px);
+background-size:72px 72px;
+opacity:0.35;
+animation:none;
+}
+.hero::after {
+background:linear-gradient(90deg,rgba(18,32,51,0.72),rgba(18,32,51,0.16));
+animation:none;
+}
+.hero-content {
+max-width:820px;
+padding:0;
+}
+.hero-shell {
+width:100%;
+max-width:1180px;
+margin:0 auto;
+display:grid;
+grid-template-columns:minmax(0,1.05fr) minmax(320px,0.95fr);
+gap:42px;
+align-items:center;
+position:relative;
+z-index:2;
+}
+.hero h2 {
+font-size:clamp(38px,6.8vw,78px);
+line-height:1.03;
+margin-bottom:18px;
+background:none;
+-webkit-text-fill-color:#fff;
+color:#fff;
+text-shadow:0 20px 48px rgba(0,0,0,0.35);
+letter-spacing:0;
+}
+.hero .tagline {
+display:inline-flex;
+padding:9px 14px;
+border:1px solid rgba(255,255,255,0.35);
+border-radius:999px;
+background:rgba(255,255,255,0.14);
+color:#fff;
+font-size:clamp(15px,2.2vw,19px);
+letter-spacing:0;
+backdrop-filter:blur(12px);
+animation:none;
+}
+.hero p {
+max-width:720px;
+font-size:clamp(17px,2vw,22px);
+color:rgba(255,255,255,0.9);
+margin-top:22px;
+}
+.btn,
+.inquiry-btn {
+display:inline-flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+min-height:48px;
+max-width:100%;
+text-align:center;
+line-height:1.2;
+border-radius:12px;
+background:linear-gradient(135deg,var(--accent),#d97706);
+box-shadow:0 18px 34px rgba(245,158,11,0.28);
+animation:none;
+}
+.btn:hover,
+.inquiry-btn.primary:hover {
+background:linear-gradient(135deg,#d97706,#1d4ed8);
+}
+.hero-stats {
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:14px;
+max-width:680px;
+margin:36px 0 0;
+}
+.hero-stat {
+padding:18px;
+border:1px solid rgba(255,255,255,0.28);
+border-radius:18px;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(16px);
+}
+.hero-stat strong {
+display:block;
+font-size:28px;
+color:#fff;
+line-height:1;
+}
+.hero-stat span {
+display:block;
+margin-top:8px;
+font-size:13px;
+color:rgba(255,255,255,0.78);
+}
+.hero-dashboard {
+background:rgba(255,255,255,0.13);
+border:1px solid rgba(255,255,255,0.28);
+border-radius:26px;
+padding:22px;
+box-shadow:0 28px 80px rgba(0,0,0,0.24);
+backdrop-filter:blur(18px);
+}
+.dashboard-top {
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:14px;
+margin-bottom:18px;
+color:#fff;
+}
+.dashboard-title {
+font-size:17px;
+font-weight:700;
+}
+.dashboard-pill {
+font-size:12px;
+font-weight:700;
+padding:7px 10px;
+border-radius:999px;
+background:rgba(251,191,36,0.95);
+color:#1f2937;
+}
+.dashboard-grid {
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:12px;
+}
+.metric-tile,
+.insight-tile {
+border-radius:18px;
+padding:18px;
+background:rgba(255,255,255,0.92);
+color:var(--ink);
+min-height:130px;
+}
+.metric-tile strong {
+display:block;
+font-size:32px;
+line-height:1;
+color:var(--brand);
+}
+.metric-tile span,
+.insight-tile span {
+display:block;
+margin-top:10px;
+font-size:13px;
+color:var(--muted);
+}
+.insight-tile {
+grid-column:1 / -1;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:12px;
+align-items:center;
+}
+.mini-bar {
+height:9px;
+border-radius:99px;
+background:linear-gradient(90deg,var(--brand) var(--fill),rgba(18,32,51,0.12) var(--fill));
+}
+.section-label {
+max-width:1050px;
+margin:0 auto 12px;
+font-size:13px;
+font-weight:800;
+letter-spacing:0.08em;
+text-transform:uppercase;
+color:var(--brand);
+}
+
+.section {
+padding:90px clamp(18px,5vw,70px);
+background:transparent;
+text-align:left;
+scroll-margin-top:96px;
+}
+.section:nth-child(even),
+.team-section,
+.inquiry-section {
+background:rgba(255,255,255,0.64);
+backdrop-filter:blur(12px);
+}
+.section h2,
+.inquiry-container h2 {
+font-size:clamp(30px,4.2vw,48px);
+line-height:1.08;
+margin:0 auto 18px;
+max-width:1050px;
+background:none;
+-webkit-text-fill-color:var(--ink);
+color:var(--ink);
+text-shadow:none;
+}
+.section > p,
+.inquiry-container > p {
+max-width:920px;
+margin:0 auto 34px;
+font-size:clamp(16px,1.8vw,20px);
+color:var(--muted);
+}
+.cards,
+.team-grid,
+.contact-info,
+.inquiry-features {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+max-width:1180px;
+margin:0 auto;
+}
+.team-grid {max-width:640px;}
+.card,
+.team-member,
+.contact-item,
+.feature-item {
+width:auto;
+border-radius:18px;
+background:rgba(255,255,255,0.94);
+border:1px solid var(--line);
+box-shadow:0 18px 48px rgba(18,32,51,0.08);
+padding:28px;
+}
+.card::after,
+.team-member::before,
+.contact-item::before,
+.team-section::before,
+.inquiry-section::before,
+.footer::before {display:none;}
+.card:hover,
+.team-member:hover,
+.contact-item:hover,
+.feature-item:hover {
+transform:translateY(-8px);
+box-shadow:0 26px 60px rgba(37,99,235,0.15);
+border-color:rgba(37,99,235,0.28);
+}
+.card h3,
+.contact-item h3 {
+color:var(--ink);
+font-size:21px;
+}
+.card h3 i,
+.contact-item i,
+.feature-item i {
+color:var(--brand);
+animation:none;
+}
+.card p,
+.team-member .member-bio,
+.contact-item p,
+.feature-item p {
+color:var(--muted);
+font-size:15px;
+}
+.card {
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+.card h3 {
+display:flex;
+align-items:center;
+gap:10px;
+}
+.card-list {
+display:grid;
+gap:9px;
+margin-top:auto;
+padding-top:10px;
+border-top:1px solid var(--line);
+}
+.card-list span {
+display:flex;
+align-items:center;
+gap:8px;
+font-size:13px;
+font-weight:600;
+color:var(--ink);
+}
+.card-list span::before {
+content:'';
+width:7px;
+height:7px;
+border-radius:50%;
+background:var(--accent);
+flex:0 0 auto;
+}
+.knowledge-strip {
+max-width:1180px;
+margin:34px auto 0;
+display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:14px;
+}
+.knowledge-item {
+padding:18px;
+border-radius:18px;
+background:#fff;
+border:1px solid var(--line);
+box-shadow:0 14px 36px rgba(18,32,51,0.06);
+}
+.knowledge-item strong {
+display:block;
+font-size:18px;
+color:var(--ink);
+}
+.knowledge-item span {
+display:block;
+margin-top:6px;
+font-size:13px;
+color:var(--muted);
+}
+.info-grid {
+max-width:1180px;
+margin:34px auto 0;
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:18px;
+}
+.info-panel {
+padding:24px;
+border-radius:20px;
+background:linear-gradient(180deg,#fff,#f7fbfd);
+border:1px solid var(--line);
+box-shadow:0 18px 48px rgba(18,32,51,0.08);
+}
+.info-panel h3 {
+font-size:20px;
+margin-bottom:14px;
+color:var(--ink);
+}
+.info-panel ul {
+list-style:none;
+display:grid;
+gap:10px;
+}
+.info-panel li {
+position:relative;
+padding-left:20px;
+font-size:14px;
+line-height:1.55;
+color:var(--muted);
+}
+.info-panel li::before {
+content:'';
+position:absolute;
+left:0;
+top:0.6em;
+width:8px;
+height:8px;
+border-radius:50%;
+background:var(--brand);
+}
+.workflow-grid {
+max-width:1180px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:18px;
+counter-reset:workflow;
+}
+.workflow-step {
+position:relative;
+padding:26px 22px;
+border-radius:20px;
+background:linear-gradient(180deg,#fff,#f7fbfd);
+border:1px solid var(--line);
+box-shadow:0 18px 48px rgba(18,32,51,0.08);
+}
+.workflow-step::before {
+counter-increment:workflow;
+content:'0' counter(workflow);
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:40px;
+height:40px;
+border-radius:12px;
+background:var(--ink);
+color:#fff;
+font-weight:800;
+margin-bottom:18px;
+}
+.workflow-step h3 {
+font-size:19px;
+margin-bottom:10px;
+color:var(--ink);
+}
+.workflow-step p {
+font-size:14px;
+color:var(--muted);
+line-height:1.6;
+}
+.about-grid {
+max-width:1180px;
+margin:0 auto;
+display:grid;
+grid-template-columns:minmax(0,1fr) minmax(280px,0.75fr);
+gap:24px;
+align-items:start;
+}
+.about-copy,
+.about-panel {
+background:rgba(255,255,255,0.92);
+border:1px solid var(--line);
+border-radius:22px;
+padding:28px;
+box-shadow:0 18px 48px rgba(18,32,51,0.08);
+}
+.about-copy p,
+.about-panel p {
+margin:0 0 16px;
+max-width:none;
+font-size:16px;
+color:var(--muted);
+}
+.about-copy p:last-child,
+.about-panel p:last-child {margin-bottom:0;}
+.about-panel h3 {
+font-size:22px;
+margin-bottom:16px;
+color:var(--ink);
+}
+.capability-list {
+display:grid;
+gap:12px;
+}
+.capability-list span {
+padding:12px 14px;
+border-radius:14px;
+background:var(--soft);
+font-size:14px;
+font-weight:700;
+color:var(--ink);
+}
+.member-avatar {
+background:linear-gradient(135deg,var(--brand-dark),var(--brand));
+box-shadow:0 14px 36px rgba(37,99,235,0.24);
+}
+.member-name {color:var(--ink);}
+.member-role {color:var(--brand);}
+.social-link {
+background:var(--ink);
+border-radius:12px;
+}
+.social-link:hover {
+background:var(--brand);
+}
+.inquiry-section {
+text-align:center;
+}
+.inquiry-container {max-width:1120px;}
+.inquiry-buttons {margin-top:8px;}
+.inquiry-btn.secondary {
+color:var(--ink);
+border-color:var(--line);
+background:#fff;
+}
+.inquiry-btn.secondary:hover {
+background:var(--ink);
+color:#fff;
+}
+.feature-item {
+background:linear-gradient(180deg,#fff,#f7fbfd);
+}
+.feature-item h3 {color:var(--ink);}
+.footer {
+background:var(--ink);
+border-top:0;
+}
+.footer-section h3,
+.footer-section p,
+.footer-bottom {color:#fff;}
+.footer-bottom {border-color:rgba(255,255,255,0.16);}
+.particle,
+.shape {display:none;}
+
+@media (max-width:768px) {
+header {
+align-items:flex-start;
+gap:12px;
+position:sticky;
+}
+header h1 {font-size:20px;}
+.logo-container {justify-content:flex-start;}
+nav {
+width:100%;
+justify-content:flex-start;
+overflow-x:auto;
+padding-bottom:4px;
+scrollbar-width:none;
+}
+nav::-webkit-scrollbar {display:none;}
+nav a {
+white-space:nowrap;
+font-size:13px;
+padding:8px 12px;
+}
+.hero {
+padding:96px 18px 64px;
+min-height:auto;
+}
+.hero h2 {
+font-size:clamp(32px,10vw,46px);
+line-height:1.08;
+}
+.hero p {
+font-size:16px;
+}
+.hero-shell {
+grid-template-columns:1fr;
+gap:24px;
+}
+.hero-stats {
+grid-template-columns:1fr;
+}
+.hero-dashboard {
+padding:16px;
+border-radius:20px;
+}
+.dashboard-grid,
+.insight-tile,
+.knowledge-strip,
+.info-grid,
+.workflow-grid,
+.about-grid {
+grid-template-columns:1fr;
+}
+.insight-tile {
+gap:14px;
+}
+.section {
+padding:64px 18px;
+}
+.cards,
+.team-grid,
+.contact-info,
+.inquiry-features {
+grid-template-columns:1fr;
+}
+.card,
+.team-member,
+.contact-item,
+.feature-item {
+padding:22px;
+}
+.btn,
+.inquiry-btn,
+.social-link {
+width:100%;
+max-width:360px;
+}
+.inquiry-buttons {
+align-items:center;
+}
+.footer {
+padding:42px 18px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1><div class="logo-container"><div class="logo"></div><span class="company-name">Zenzeros Infotech</span></div></h1>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#workflow">Workflow</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-shell">
+<div class="hero-content">
+<h2>Digital Transformation for Schools & Vehicles</h2>
+<div class="tagline">Empowering Education & Automotive Through Technology</div>
+<p>We specialize in developing comprehensive digital solutions for educational institutions and automotive businesses. From school management systems to vehicle apps like WheelDeals, we help organizations embrace the future with cutting-edge technology.</p>
+<a class="btn" href="tel:+917385649089"><i class="fas fa-phone"></i>&nbsp; Transform Your School</a>
+<div class="hero-stats">
+<div class="hero-stat"><strong>360</strong><span>school operations support</span></div>
+<div class="hero-stat"><strong>2 weeks</strong><span>fast implementation planning</span></div>
+<div class="hero-stat"><strong>24/7</strong><span>reliable support mindset</span></div>
+</div>
+</div>
+<div class="hero-dashboard" aria-label="Zenzeros solution dashboard preview">
+<div class="dashboard-top">
+<div class="dashboard-title">Smart Institution Console</div>
+<div class="dashboard-pill">Live Ready</div>
+</div>
+<div class="dashboard-grid">
+<div class="metric-tile"><strong>92%</strong><span>attendance visibility with class-wise monitoring</span></div>
+<div class="metric-tile"><strong>4x</strong><span>faster fee, exam, and report workflows</span></div>
+<div class="insight-tile">
+<div><strong>Modules</strong><span>students, staff, fees, exams</span></div>
+<div><div class="mini-bar" style="--fill:84%"></div><span>Academic planning</span></div>
+<div><div class="mini-bar" style="--fill:72%"></div><span>Vehicle service flow</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section fade-in-up" id="services">
+<div class="section-label">What we build</div>
+<h2>Our Digital Solutions</h2>
+<p>Comprehensive digital solutions designed for educational institutions and automotive businesses to streamline operations and enhance user experiences.</p>
+<div class="cards">
+<div class="card fade-in-up">
+<h3><i class="fas fa-graduation-cap"></i> School Management</h3>
+<p>Complete school management software with attendance, fees, exams, and student information management.</p>
+<div class="card-list"><span>Student profiles and admissions</span><span>Fee tracking and receipts</span><span>Exam results and reports</span></div>
+</div>
+<div class="card fade-in-up">
+<h3><i class="fas fa-chalkboard-teacher"></i> E-Learning Platforms</h3>
+<p>Interactive online learning platforms with virtual classrooms, assignments, and progress tracking.</p>
+<div class="card-list"><span>Assignments and study material</span><span>Teacher-student communication</span><span>Progress insights for parents</span></div>
+</div>
+<div class="card fade-in-up">
+<h3><i class="fas fa-car"></i> WheelDeals - Vehicle Apps</h3>
+<p>Comprehensive vehicle management solutions including garage management, vehicle tracking, and service booking applications.</p>
+<div class="card-list"><span>Garage and service booking</span><span>Vehicle records and history</span><span>Customer follow-up tools</span></div>
+</div>
+<div class="card fade-in-up">
+<h3><i class="fas fa-chart-line"></i> Analytics Dashboard</h3>
+<p>Real-time analytics and reporting tools for performance monitoring and data-driven decision making.</p>
+<div class="card-list"><span>Daily operational snapshots</span><span>Actionable trend reports</span><span>Role-based data access</span></div>
+</div>
+</div>
+<div class="knowledge-strip">
+<div class="knowledge-item"><strong>Secure Data</strong><span>Structured access for administrators, staff, parents, and students.</span></div>
+<div class="knowledge-item"><strong>Easy Training</strong><span>Simple workflows that teams can learn quickly and use daily.</span></div>
+<div class="knowledge-item"><strong>Scalable Modules</strong><span>Add features as your institution or business grows.</span></div>
+<div class="knowledge-item"><strong>Local Support</strong><span>Support focused on Pune, Nashik, and Maharashtra clients.</span></div>
+</div>
+<div class="info-grid">
+<div class="info-panel">
+<h3>For Schools</h3>
+<ul>
+<li>Manage admissions, student records, attendance, fees, exams, and certificates from one system.</li>
+<li>Give administrators, teachers, parents, and students role-based access to the right information.</li>
+<li>Use dashboards to track daily activity, pending fees, class performance, and communication updates.</li>
+</ul>
+</div>
+<div class="info-panel">
+<h3>For Parents & Students</h3>
+<ul>
+<li>Provide quick access to attendance, homework, notices, exam updates, results, and fee status.</li>
+<li>Improve communication between school staff and families through organized digital updates.</li>
+<li>Reduce manual follow-ups by keeping important academic information easy to find.</li>
+</ul>
+</div>
+<div class="info-panel">
+<h3>For Vehicle Businesses</h3>
+<ul>
+<li>Track customer vehicles, service history, garage bookings, and follow-up reminders.</li>
+<li>Organize daily service operations with clear records and faster customer handling.</li>
+<li>Build trust through digital service updates, history logs, and simple booking workflows.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section fade-in-up" id="about">
+<div class="section-label">Who we are</div>
+<h2>About Zenzeros Infotech</h2>
+<div class="about-grid">
+<div class="about-copy">
+<p>Zenzeros Infotech Pvt Ltd builds practical digital systems for schools and automotive businesses. Our focus is simple: reduce manual work, improve visibility, and create software that teams can trust every day.</p>
+<p><b>Our Mission:</b> To empower schools and automotive businesses with technology that improves operations, communication, reporting, and user experience.</p>
+<p><b>Specializations:</b> School Management Systems | WheelDeals Vehicle Apps</p>
+<p><b>Locations:</b> Pune | Nashik</p>
+</div>
+<div class="about-panel">
+<h3>Core Capabilities</h3>
+<div class="capability-list">
+<span>Web and mobile application development</span>
+<span>Database-driven dashboards</span>
+<span>Admin, staff, parent, and customer portals</span>
+<span>Automation for daily business workflows</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section fade-in-up" id="workflow">
+<div class="section-label">How we deliver</div>
+<h2>A Clear Digital Transformation Workflow</h2>
+<p>Every project is planned so the final product is useful, understandable, and ready for real users on laptop and mobile screens.</p>
+<div class="workflow-grid">
+<div class="workflow-step"><h3>Understand</h3><p>We map your school or business process, user roles, pain points, and reporting needs.</p></div>
+<div class="workflow-step"><h3>Design</h3><p>We create a simple interface structure with dashboards, forms, and navigation that users can learn quickly.</p></div>
+<div class="workflow-step"><h3>Build</h3><p>We develop secure modules for daily operations, communication, analytics, and records.</p></div>
+<div class="workflow-step"><h3>Support</h3><p>We help teams adopt the system, collect feedback, and improve the product over time.</p></div>
+</div>
+</section>
+
+<section class="section team-section fade-in-up" id="team">
+<div class="section-label">Leadership</div>
+<h2>Founder & CEO</h2>
+<p>Zenzeros Infotech is led by Akash Chavan, focused on building practical, responsive, and useful technology for schools and growing businesses.</p>
+<div class="team-grid">
+<div class="team-member fade-in-up">
+<div class="member-avatar">AC</div>
+<div class="member-name">Akash Chavan</div>
+<div class="member-role">Founder & CEO</div>
+<div class="member-bio">Visionary leader with expertise in educational technology and digital transformation. Passionate about creating innovative solutions for schools.</div>
+<a href="https://www.linkedin.com/in/akash-chavan-82b043311" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+</div>
+</div>
+</section>
+
+<!-- Inquiry Call to Action Section -->
+<section class="section inquiry-section fade-in-up">
+<div class="inquiry-container">
+<h2>Ready to Transform Your School?</h2>
+<p>Join hundreds of educational institutions already using our cutting-edge digital solutions. Let's discuss how we can help your school embrace the future of education.</p>
+<div class="inquiry-buttons">
+<a href="#contact" class="inquiry-btn primary">Start Your Journey</a>
+<a href="tel:+917385649089" class="inquiry-btn secondary">Call Us Now</a>
+</div>
+<div class="inquiry-features">
+<div class="feature-item">
+<i class="fas fa-rocket"></i>
+<h3>Quick Implementation</h3>
+<p>Get started in as little as 2 weeks</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-shield-alt"></i>
+<h3>Secure & Reliable</h3>
+<p>Bank-level security for your data</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-headset"></i>
+<h3>24/7 Support</h3>
+<p>Round-the-clock assistance</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section fade-in-up" id="contact">
+<h2>Get In Touch</h2>
+<p>Ready to transform your school with cutting-edge digital solutions? Contact us today for a consultation.</p>
+<div class="contact-info">
+<div class="contact-item fade-in-up">
+<i class="fas fa-phone"></i>
+<h3>Phone</h3>
+<p>+91 7385649089</p>
+</div>
+<div class="contact-item fade-in-up">
+<i class="fas fa-envelope"></i>
+<h3>Email</h3>
+<p>zenzeroinfotechpvt@gmail.com</p>
+</div>
+<div class="contact-item fade-in-up">
+<i class="fas fa-map-marker-alt"></i>
+<h3>Locations</h3>
+<p>Pune | Nashik<br>Maharashtra, India</p>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-section">
+<h3>Zenzeros Infotech Pvt Ltd</h3>
+<p>Leading the digital transformation of educational institutions with innovative technology solutions.</p>
+</div>
+<div class="footer-section">
+<h3>Leadership</h3>
+<p><strong>Founder & CEO:</strong> Akash Chavan</p>
+</div>
+<div class="footer-section">
+<h3>Contact</h3>
+<p><strong>Phone:</strong> +91 7385649089<br>
+<strong>Email:</strong> zenzerosinfotechpvt@gmail.com<br>
+<strong>Locations:</strong> Pune | Nashik</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Zenzeros Infotech Pvt Ltd | All Rights Reserved | Empowering Schools Through Technology</p>
+<p><strong>Company Registration Number:</strong> UDYAM-MH-23-0400306</p>
+</div>
+</footer>
+
+<script>
+// Scroll animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+
+// Observe all fade-in elements
+document.querySelectorAll('.fade-in-up').forEach(el => {
+observer.observe(el);
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav a').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const href = this.getAttribute('href');
+if (href === '#') {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+return;
+}
+const target = document.querySelector(href);
+if (target) {
+target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+});
+});
+
+// Button click animation
+document.querySelector('.btn').addEventListener('click', function() {
+this.style.transform = 'scale(0.95)';
+setTimeout(() => {
+this.style.transform = '';
+}, 200);
+});
+</script>
+
+<!-- Floating Particles -->
+<div class="particles">
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+</div>
+
+<!-- Floating Shapes -->
+<div class="floating-shapes">
+<div class="shape"></div>
+<div class="shape"></div>
+<div class="shape"></div>
+<div class="shape"></div>
+<div class="shape"></div>
+</div>
+
+</body>
+</html>
